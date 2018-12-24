@@ -1,0 +1,7 @@
+.DS_Store
+Gemfile.lock
+coverage
+.bundle
+.idea
+.env
+spec/_DS_Store
