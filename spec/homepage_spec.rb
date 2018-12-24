@@ -39,7 +39,6 @@ describe 'Home Page', type: :feature do
   it 'accesses the cart page' do
     @home_page.wait_for_header
     @home_page.btn_cart.click
-    #sleep(1)
     cart_page = Cart.new
     cart_page.load(query: {'controller'=>'order'})
     expect(cart_page).to be_displayed
@@ -48,7 +47,6 @@ describe 'Home Page', type: :feature do
   it 'accesses the sign in page' do
     @home_page.wait_for_header
     @home_page.lnk_sign_in.click
-    #sleep(1)
     sign_in_page = SignIn.new
     sign_in_page.load(query: {'controller'=>'authentication', 'back'=>''})
     expect(sign_in_page).to be_displayed
