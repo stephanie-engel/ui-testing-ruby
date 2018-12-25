@@ -28,10 +28,16 @@ After Docker is installed, cd into this repo.
 docker-compose up
 ```
 
-2. Run the tests with the following command:
+2. Run the tests (including the browser parameter) with following command:
 ```
-rspec spec
+BROWSER=firefox rspec spec
 ```
+
+Or run an individual test suite like this:
+```
+BROWSER=chrome rspec spec/homepage_spec.rb
+```
+
 3. To use VNC (Virtual Network Computing) to see the test interact with the non-headless
 browsers,
   - Go to RealVNC's site (https://www.realvnc.com/en/connect/download/viewer/macos/
