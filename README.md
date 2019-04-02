@@ -28,7 +28,20 @@ After Docker is installed, cd into this repo.
 docker-compose up
 ```
 
-2. Run the tests (including the browser parameter) with following command:
+2. In the cloned repo, you will need to create a .env file
+  - Once the .env file is created, make sure to add the following values within the file:
+```
+QA_URL = http://automationpractice.com/index.php
+SELENIUM_HUB_URL = http://localhost:4444/wd/hub
+BROWSER = firefox
+BROWSER = chrome
+BROWSER = chrome_h
+```
+  - I did not commit the .env file since that is not standard practice, however I provided the file 
+  contents because these are non-secure values and this will allow you to run the tests on the correct
+  site.
+
+3. Run the tests (including the browser parameter) with following command:
 ```
 BROWSER=firefox rspec spec
 ```
@@ -38,7 +51,7 @@ Or run an individual test suite like this:
 BROWSER=chrome rspec spec/homepage_spec.rb
 ```
 
-3. To use VNC (Virtual Network Computing) to see the test interact with the non-headless
+4. To use VNC (Virtual Network Computing) to see the test interact with the non-headless
 browsers,
   - Go to RealVNC's site (https://www.realvnc.com/en/connect/download/viewer/macos/
     and download the viewer)
