@@ -3,16 +3,16 @@
 version: '2'
 services:
 
-  # node-chrome:
-  #   image: selenium/node-chrome:3.11.0-bismuth
-  #   volumes:
-  #     - /dev/shm:/dev/shm
-  #   depends_on:
-  #     - hub
-  #   environment:
-  #     HUB_HOST: hub
-  #   ports:
-  #     - "5901:5900"
+  node-chrome:
+    image: selenium/node-chrome:3.11.0-bismuth
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+    ports:
+      - "5901:5900"
 
   node-chrome-debug:
     image: selenium/node-chrome-debug:3.11.0-bismuth

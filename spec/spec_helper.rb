@@ -28,6 +28,10 @@ def setup
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome
   elsif ENV['BROWSER'] == 'firefox'
     capabilities = Selenium::WebDriver::Remote::Capabilities.firefox
+  elsif ENV['BROWSER'] == 'chrome_h'
+      capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+        chromeOptions: { args: ['headless','no-sandbox','disable-gpu','window-size=1920x1080']}
+      )
   else
     puts "Unsupported browser!"
   end
